@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="homepage">
+  <div class="top-bar">
+    <span class="back-arrow" onclick="goBack()">⬅ Back</span>
+    <input type="text" id="searchInput" placeholder="Search Telugu Movies...">
+  </div>
+
+  <div class="movie-gallery">
+    <!-- Each movie card: image + name -->
+    <div class="movie-card">
+      <a href="details.html?movie=War&theater=PVR Cinemas&city=Hyderabad&cost=180">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.FL2oEXsInvzoZh2-Bh_iCQHaJ3?pid=Api&P=0&h=180" alt="war">
+        <p class="movie-name">war</p>
+      </a>
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=Pushpa 2&theater=INOX&city=Vizag&cost=200">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.yfiJs6jQUF2j_VfGl13M4wHaJQ?pid=Api&P=0&h=180" alt="Pushpa ">
+        <p class="movie-name">pushpa</p>
+      </a> 
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=DevDas&theater=INOX&city=Vizag&cost=100">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.o2HFuHWsywFVkl8n2VbztQHaLi?pid=Api&P=0&h=180" alt="devdas">
+        <p class="movie-name">DevDas</p>
+      </a>
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=hanuman&theater=ICinemas&city=nellore&cost=250">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.4eObjw--PwWhPgNY4PyEWwHaFj?pid=Api&P=0&h=180" alt="Hanuman">
+      <p class="movie-name">Hanuman</p>
+      </a>
+    </div>
+    
+    <div class="movie-card">
+      <a href="details.html?movie=pokiri&theater=venkateswara&city=kavali&cost=200">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.-Uq35Wc2YXG6tbNuC0Qc_gHaLH?pid=Api&P=0&h=180" alt="pokiri">
+      <p class="movie-name">pokiri</p>
+      </a>
+    </div>
+    
+  </div>
+
+  <script>
+      const searchInput = document.getElementById("searchInput");
+      const movieCards = document.querySelectorAll(".movie-card");
+
+      searchInput.addEventListener("input", function () {
+        const query = searchInput.value.toLowerCase();
+
+        movieCards.forEach(function (card) {
+          const movieName = card.querySelector(".movie-name").textContent.toLowerCase();
+          if (movieName.includes(query)) {
+            card.style.display="block";
+
+          }else{
+            card.style.display="none";
+          }
+        });
+      });
+    function goBack() {
+      window.history.back();
+    }
+    
+</script>
+  </script>
+</body>
+</html>

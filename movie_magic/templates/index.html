@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Magic</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('img.jpeg');
+
+    body.homepage {
+      background-image: url('https://wallpaperaccess.com/full/4840785.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: rgb(244, 240, 240);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(5, 9, 5, 0.75);
+      padding: 40px 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: #5c5956;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .buttons button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #5c5956, #5c5956);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .buttons button:hover {
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="homepage">
+  <div class="container">
+    <h1> Movie Magic </h1>
+    <div class="buttons">
+      <button onclick="goToAccount()">Login</button>
+      <button onclick="goToAccount()">Sign In</button>
+    </div>
+  </div>
+  <script>
+    function goToAccount() {
+      window.location.href = "/account";
+    }
+  </script>
+</body>
+</html>
